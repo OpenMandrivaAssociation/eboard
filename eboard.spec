@@ -1,5 +1,5 @@
 %define name    eboard
-%define version 1.0.2
+%define version 1.0.4
 %define release %mkrel 1
 %define summary FICS chess-server interface
 %define _gamesbindir %_prefix/games
@@ -12,12 +12,12 @@ Release:        %release
 License:        GPL
 Group:          Games/Boards
 URL:            http://eboard.sf.net
-Source0:        %name-%version.tar.bz2
-Source1:        %name-icons.tar.bz2
-Source2:	%name-extras-1pl2.tar.bz2
-Source3:	%name-extras-2.tar.bz2
+Source0:        http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-%version.tar.bz2
+Source1:        http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-icons.tar.bz2
+Source2:	http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-extras-1pl2.tar.bz2
+Source3:	http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-extras-2.tar.bz2
 BuildRoot:      %_tmppath/%name-buildroot
-Buildrequires:  imlib-devel gtk+2-devel
+Buildrequires:  gtk+2-devel
 
 
 %description
