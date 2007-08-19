@@ -57,15 +57,15 @@ engines like GNU Chess, Sjeng and Crafty.
              datadir=%buildroot/%_gamesdatadir/%name
 
 # Menu
-%__install -d %buildroot/%_menudir
-cat > %buildroot/%_menudir/%name << EOF
-?package(%name): \
-command="%_gamesbindir/%name" \
-needs="X11" \
-icon="%name.png" \
-section="Amusement/Boards" \
-title="Eboard" \
-longtitle="%summary"
+mkdir -p %buildroot%_datadir/applications
+cat > %buildroot%_datadir/applications/mandriva-%{name}.desktop << EOF
+[Desktop Entry]
+Name=Eboard
+Comment=FICS chess-server interface
+Exec=%_gamesbindir/%name
+Icon=%name
+Type=Application
+Categories=Game;BoardGame;
 EOF
 
 # Icons
@@ -98,7 +98,5 @@ EOF
 %dir %_gamesdatadir/%name
 %_mandir/man1/*
 %_mandir/man6/*
-%_menudir/*
+%_datadir/applications/*
 %_iconsdir/*
-
-
