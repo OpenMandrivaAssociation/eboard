@@ -16,7 +16,6 @@ Source0:        http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-%version
 Source1:        http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-icons.tar.bz2
 Source2:	http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-extras-1pl2.tar.bz2
 Source3:	http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-extras-2.tar.bz2
-BuildRoot:      %_tmppath/%name-buildroot
 Buildrequires:  gtk+2-devel
 
 
