@@ -21,7 +21,6 @@ Buildrequires:  gtk+2-devel
 
 
 %description
-
 eboard is a chess interface for Unix-like systems (GNU/Linux, FreeBSD,
 Solaris, etc.) based on the GTK+ GUI toolkit.  It provides a chess
 board interface to ICS (Internet Chess Servers) like FICS and to chess
