@@ -77,11 +77,15 @@ EOF
 %__install %name-extras-*/*.{png,wav} %buildroot/%_gamesdatadir/%name
 
 
+%if %mdkversion < 200900
 %post
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 
 %clean
