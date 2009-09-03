@@ -36,7 +36,7 @@ engines like GNU Chess, Sjeng and Crafty.
 
 
 %build
-%configure
+%configure2_5x
 
 # o_O
 %__sed -i 's/-O6/%optflags/' Makefile
