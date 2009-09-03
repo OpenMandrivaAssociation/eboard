@@ -1,6 +1,6 @@
 %define name    eboard
 %define version 1.0.4
-%define release %mkrel 3
+%define release %mkrel 4
 %define summary FICS chess-server interface
 %define _gamesbindir %_prefix/games
 %define _gamesdatadir %_datadir/games
