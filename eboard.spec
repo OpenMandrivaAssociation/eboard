@@ -1,6 +1,6 @@
 %define name    eboard
 %define version 1.0.4
-%define release %mkrel 4
+%define release %mkrel 5
 %define summary FICS chess-server interface
 %define _gamesbindir %_prefix/games
 %define _gamesdatadir %_datadir/games
@@ -9,13 +9,14 @@ Summary:        %summary
 Name:           %name
 Version:        %version
 Release:        %release
-License:        GPL
+License:        GPLv2+
 Group:          Games/Boards
 URL:            http://eboard.sf.net
 Source0:        http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-%version.tar.bz2
 Source1:        http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-icons.tar.bz2
 Source2:	http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-extras-1pl2.tar.bz2
 Source3:	http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-extras-2.tar.bz2
+Patch0:		eboard-1.0.4-mdv-fix-str-fmt.patch
 BuildRoot:      %_tmppath/%name-buildroot
 Buildrequires:  gtk+2-devel
 
@@ -33,7 +34,7 @@ engines like GNU Chess, Sjeng and Crafty.
 %setup -q -T -D -a1
 %setup -q -T -D -a2
 %setup -q -T -D -a3
-
+%patch0 -p1 -b .strfmt
 
 %build
 %configure2_5x
