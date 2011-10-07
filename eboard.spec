@@ -17,6 +17,7 @@ Patch0:		eboard-1.0.4-mdv-fix-str-fmt.patch
 Patch1:		eboard-1.1.1-gcc44.patch
 Patch2:		eboard-1.1.1-libpng15.patch
 Patch3:		eboard-1.1.1-link.patch
+Patch4:		eboard-1.1.1-ldl.patch
 BuildRoot:      %{_tmppath}/%{name}-buildroot
 Buildrequires:  gtk+2-devel
 Buildrequires:  libpng-devel
@@ -36,6 +37,8 @@ engines like GNU Chess, Sjeng and Crafty.
 %patch1 -p1 -b .gcc44
 %patch2 -p0 -b .png15
 %patch3 -p0 -b .link
+%patch4 -p1 -b .ldl
+
 
 %build
 %configure2_5x
