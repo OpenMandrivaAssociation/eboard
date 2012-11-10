@@ -1,0 +1,12 @@
+diff -urN eboard-1.1.1/configure eboard-1.1.1-patched/configure
+--- eboard-1.1.1/configure	2008-02-23 01:51:22.000000000 +1000
++++ eboard-1.1.1-patched/configure	2011-10-08 00:44:44.642970270 +1100
+@@ -7,7 +7,7 @@
+ my $version     = "1.1.1";
+ my $cxx         = "g++";
+ my @cxxflags    = ("-O6");
+-my @ldflags     = ("-lpthread");
++my @ldflags     = ("-lpthread","-ldl");
+ my @libs        = ();
+ my $configh     = "config.h";
+ my $configmake  = "config.make";

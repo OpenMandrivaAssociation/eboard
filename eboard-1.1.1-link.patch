@@ -1,0 +1,22 @@
+--- configure.orig	2011-09-19 08:21:18.000000000 +0200
++++ configure	2011-09-19 08:22:05.000000000 +0200
+@@ -668,7 +668,7 @@
+ 
+ print CONFIGMAKE "CXX       = $cxx\n";
+ print CONFIGMAKE "CXXFLAGS  = @cxxflags\n";
+-print CONFIGMAKE "LDFLAGS   = @ldflags\n";
++print CONFIGMAKE "LIBS   = @ldflags\n";
+ 
+ print CONFIGMAKE "prefix    = \${DESTDIR}$prefix\n";
+ print CONFIGMAKE "bindir    = \${DESTDIR}$prefix/bin\n";
+--- elifekam.orig	2011-09-19 08:20:52.000000000 +0200
++++ elifekam	2011-09-19 08:21:03.000000000 +0200
+@@ -24,7 +24,7 @@
+ all: eboard nls-dicts
+ 
+ eboard: $(OBJS)
+-	$(CXX) $(LDFLAGS) -o eboard $(OBJS)
++	$(CXX) $(LDFLAGS) -o eboard $(OBJS) $(LIBS)
+ 
+ .cc.o: $< $(HEADERS) $(XPMS)
+ 	$(CXX) $(CXXFLAGS) -c $< -o $@

@@ -1,0 +1,63 @@
+diff -p -up eboard-1.0.4/clock.cc.strfmt eboard-1.0.4/clock.cc
+--- eboard-1.0.4/clock.cc.strfmt	2007-05-23 20:57:45.000000000 +0200
++++ eboard-1.0.4/clock.cc	2009-12-07 19:31:31.000000000 +0100
+@@ -326,7 +326,7 @@ void TimeControl::toShortString(char *de
+   char z[64],y[64];
+   switch(mode) {
+   case TC_NONE:
+-    snprintf(dest,maxlen,_("untimed")); // TRANSLATE
++    snprintf(dest,maxlen,"%s",_("untimed")); // TRANSLATE
+     break;
+   case TC_SPM:
+     TimeControl::secondsToString(z,64,value[0],true);
+@@ -346,7 +346,7 @@ void TimeControl::toString(char *dest, i
+   char z[64],y[64];
+   switch(mode) {
+   case TC_NONE:
+-    snprintf(dest,maxlen,_("no time control set"));
++    snprintf(dest,maxlen,"%s",_("no time control set"));
+     break;
+   case TC_SPM:
+     TimeControl::secondsToString(z,64,value[0],true);
+diff -p -up eboard-1.1.1/dgtboard.cc.strfmt eboard-1.1.1/dgtboard.cc
+--- eboard-1.1.1/dgtboard.cc.strfmt	2007-05-23 20:57:45.000000000 +0200
++++ eboard-1.1.1/dgtboard.cc	2009-12-07 19:31:31.000000000 +0100
+@@ -111,12 +111,12 @@
+   const char *error;
+   if (!dgtnix_dll_handle) 
+     { 
+-      count += snprintf(fErrorString+count,512-count,_("Unable to load dgtnix library.\n"));
++      count += snprintf(fErrorString+count,512-count,"%s",_("Unable to load dgtnix library.\n"));
+       count+= snprintf(fErrorString+count,512-count,"dlerror: %s\n",dlerror());
+       global.output->append(fErrorString,global.Colors.TextDefault,IM_NORMAL);
+       return false;
+     }
+-  count += snprintf(fErrorString+count,512-count,_("Unable to load dgtnix library symbol.\n"));
++  count += snprintf(fErrorString+count,512-count,"%s",_("Unable to load dgtnix library symbol.\n"));
+   dlerror();
+   
+   ptr_dgtnix_errno=(int *)dlsym(dgtnix_dll_handle, "dgtnix_errno");
+diff -p -up eboard-1.0.4/network.cc.strfmt eboard-1.0.4/network.cc
+--- eboard-1.0.4/network.cc.strfmt	2007-05-23 20:57:45.000000000 +0200
++++ eboard-1.0.4/network.cc	2009-12-07 19:31:31.000000000 +0100
+@@ -661,7 +661,7 @@ int PipeConnection::open() {
+     arguments[i]=0;
+ 
+   if (HelperBin[0]==0) {
+-    snprintf(errorMessage,128,_("Helper program not found"));
++    snprintf(errorMessage,128,"%s",_("Helper program not found"));
+     return -1;
+   }
+ 
+diff -p -up eboard-1.0.4/sound.cc.strfmt eboard-1.0.4/sound.cc
+--- eboard-1.0.4/sound.cc.strfmt	2009-12-07 19:31:50.000000000 +0100
++++ eboard-1.0.4/sound.cc	2009-12-07 19:32:26.000000000 +0100
+@@ -320,7 +320,7 @@ char *SoundEvent::getDescription() {
+     snprintf(pvt,128,_("run %s"),ExtraData);
+     break;
+   case PLAIN_BEEP:
+-    snprintf(pvt,128,_("plain console beep"));
++    snprintf(pvt,128,"%s",_("plain console beep"));
+     break;
+   default:
+     g_strlcpy(pvt,_("nothing"),128);
