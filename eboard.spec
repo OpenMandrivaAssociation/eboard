@@ -107,3 +107,57 @@ EOF
 %{_datadir}/applications/*
 %{_iconsdir}/*
 
+
+
+%changelog
+* Fri Oct 07 2011 Andrey Bondrov <abondrov@mandriva.org> 1.1.1-1mdv2012.0
++ Revision: 703478
+- Add patch4 to fix linking with libdl
+- New version: 1.1.1
+
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 1.0.4-6mdv2011.0
++ Revision: 610333
+- rebuild
+
+* Mon Dec 07 2009 Jérôme Brenier <incubusss@mandriva.org> 1.0.4-5mdv2010.1
++ Revision: 474486
+- fix str fmt
+- fix license tag
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - use %%configure2_5x
+    - rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 1.0.4-3mdv2009.0
++ Revision: 244604
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Tue Feb 12 2008 Thierry Vignaud <tv@mandriva.org> 1.0.4-1mdv2008.1
++ Revision: 165938
+- fix spacing at top of description
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Sun Aug 19 2007 Funda Wang <fwang@mandriva.org> 1.0.4-1mdv2008.0
++ Revision: 66551
+- xdg menu entry
+- New vesion 1.0.4
+
+
+* Tue Jan 16 2007 Lenny Cartier <lenny@mandriva.com> 1.0.2-1mdv2007.0
++ Revision: 109420
+- Update to 1.0.2
+
+* Tue Jan 09 2007 Lenny Cartier <lenny@mandriva.com> 1.0.1-1mdv2007.1
++ Revision: 106679
+- Update to 1.0.1
+- Buildrequires
+- Adjust buildrequires
+- Update to 1.0.0
+- Import eboard
+
