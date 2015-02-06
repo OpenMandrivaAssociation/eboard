@@ -1,6 +1,6 @@
 %define name    eboard
 %define version 1.1.1
-%define release %mkrel 1
+%define release 2
 
 Summary:        FICS chess-server interface
 Name:           %{name}
