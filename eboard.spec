@@ -8,7 +8,7 @@ Version:        %{version}
 Release:        %{release}
 License:        GPLv2+
 Group:          Games/Boards
-URL:            http://eboard.sf.net
+URL:            https://eboard.sf.net
 Source0:        http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-%version.tar.bz2
 Source1:        http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-icons.tar.bz2
 Source2:	http://nchc.dl.sourceforge.net/sourceforge/eboard/%name-extras-1pl2.tar.bz2
